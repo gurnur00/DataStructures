@@ -6,31 +6,35 @@ public class pattern9 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
-        int sp=n+1;
-        int st=1;
-        for(int i=0;i<n;i++){
-            for(int j = 1; j <= st; j++){
-                System.out.print(j+"\t");
+        int sp = 2*n-3;
+        int st = 1;
+        for(int i =1;i<=n;i++)
+        {
+            int val =1;     //since each row begins with 1
+            for(int j=1;j<=st;j++)
+            {
+                System.out.print(val + "	");
+                val++;
             }
-            for (int j = 1; j <= sp; j++) {
-                System.out.print("\t");
+
+            for(int j =1;j<=sp;j++)
+            {
+                System.out.print("	");
             }
-            if(i==n-1){
-                st--;
+            if( i == n)     //Last Row check
+            {
+                st--;       //removing extra star
+                val--;      //reducing val by 1
             }
-            for (int j = st; j > 0; j--) {
-                System.out.print(j+"\t");
+            for(int j=1;j<=st;j++)
+            {
+                val--;      //reducing value first then printing
+                System.out.print(val + "	");
+
             }
-            if (i < n) {
-                sp--;
-                st ++;
-            }
-            else {
-                sp++;
-                st --;
-            }
+            st++;
+            sp -= 2;
             System.out.println();
-            sp--;
         }
     }
 }
