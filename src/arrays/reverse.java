@@ -10,6 +10,7 @@ public class reverse {
         for(int i=0;i<a.length;i++){
             a[i]=scn.nextInt();
         }
+        long startTime = System.currentTimeMillis();
         int i = 0;
         int j = a.length - 1;
         while (i < j) {
@@ -22,5 +23,7 @@ public class reverse {
         for(i=0;i<a.length;i++){
             System.out.print(a[i]+"\t");
         }
+        long endTime = System.currentTimeMillis();
+        System.out.println(endTime-startTime);
     }
 }

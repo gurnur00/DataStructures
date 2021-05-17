@@ -16,7 +16,7 @@ public class inverse {
             in[v]=j;
         }
         for(int i=0;i<in.length;i++){
-            System.out.println(in[i]);
+            System.out.print(in[i]);
         }
     }
 }
